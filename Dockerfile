@@ -13,7 +13,7 @@ MAINTAINER Alex
 ENV TEAMSPEAK_URL http://dl.4players.de/ts/releases/3.0.11.2/teamspeak3-server_linux-amd64-3.0.11.2.tar.gz
 
 # Inject a Volume for any TS3-Data that needs to be persisted or to be accessible from the host. (e.g. for Backups)
-VOLUME ["/teamspeak3"]
+VOLUME ["/home/teamspeak3"]
 
 # Download TS3 file and extract it into /opt.
 ADD ${TEAMSPEAK_URL} /opt/
