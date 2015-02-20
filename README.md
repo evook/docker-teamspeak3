@@ -46,7 +46,7 @@ Ubuntu with TS3 Server.
     {FOLDER} is an absolute path on the host to be mapped by the containers /teamspeak3 folder.
     Injected files are used from this location, see Summary above.
 
-    `docker run --name TS3 -d -p 9987:9987/udp -p 30033:30033 -p 10011:10011 -v {FOLDER}:/teamspeak3 devalx/docker-teamspeak3:latest` 
+    `docker run --name TS3 -d -p 9987:9987/udp -p 30033:30033 -p 10011:10011 -p 2008:2008 -p 2010:2010 -v {FOLDER}:/teamspeak3 devalx/docker-teamspeak3:latest` 
     
   * Admin Secret
   
