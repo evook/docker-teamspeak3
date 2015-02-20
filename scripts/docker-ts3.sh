@@ -1,5 +1,5 @@
 #!/bin/bash
-VOLUME=/teamspeak3
+VOLUME=/home/teamspeak3
 
 echo " ----- docker-ts3 ------"
 echo "1. Check if ts3server.sqlitedb exists in host-mounted volume."
@@ -21,7 +21,7 @@ if [ -f $VOLUME/ts3server.ini ]
 	echo "query_ip_whitelist='/teamspeak3/query_ip_whitelist.txt'"
 	echo "query_ip_backlist='/teamspeak3/query_ip_blacklist.txt'"
 	echo "logpath='/teamspeak3/logs/'"
-	echo "licensepath='/teamspeak3/'" 
+	echo "licensepath='/teamspeak3/licensekey.dat'" 
 	echo "inifile='/teamspeak3/ts3server.ini'"
 	/opt/teamspeak3-server_linux-amd64/ts3server_minimal_runscript.sh \
 		inifile="/teamspeak3/ts3server.ini"
@@ -31,7 +31,7 @@ if [ -f $VOLUME/ts3server.ini ]
 		query_ip_whitelist="/teamspeak3/query_ip_whitelist.txt" \
 		query_ip_backlist="/teamspeak3/query_ip_blacklist.txt" \
 		logpath="/teamspeak3/logs/" \
-		licensepath="/teamspeak3/" 
+		licensepath="/teamspeak3/licensekey.dat" 
 		inifile="/teamspeak3/ts3server.ini" \
 		createinifile=1 
 fi
