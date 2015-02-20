@@ -4,13 +4,13 @@
 ###############################################
 
 # Using latest Ubuntu image as base
-FROM ubuntu
+FROM ubuntu:14.04
 
 MAINTAINER Alex
 
 ## Set some variables for override.
 # Download Link of TS3 Server
-ENV TEAMSPEAK_URL http://dl.4players.de/ts/releases/3.0.11.1/teamspeak3-server_linux-amd64-3.0.11.1.tar.gz
+ENV TEAMSPEAK_URL http://dl.4players.de/ts/releases/3.0.11.2/teamspeak3-server_linux-amd64-3.0.11.2.tar.gz
 
 # Inject a Volume for any TS3-Data that needs to be persisted or to be accessible from the host. (e.g. for Backups)
 VOLUME ["/teamspeak3"]
@@ -31,3 +31,7 @@ EXPOSE 9987/udp
 EXPOSE 30033 
 # for ServerQuery
 EXPOSE 10011
+# for Licence 
+EXPOSE 2008
+# for host list entry
+EXPOSE 2010
