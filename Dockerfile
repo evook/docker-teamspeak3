@@ -6,7 +6,7 @@
 # Using latest Ubuntu image as base
 FROM ubuntu:14.04
 
-MAINTAINER Alex
+MAINTAINER nobody
 
 ## Set some variables for override.
 # Download Link of TS3 Server
